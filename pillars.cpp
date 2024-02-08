@@ -22,7 +22,7 @@ int main(){
 
 
 // inheritance:
-class human{
+/*class human{
  public:
  int age;
  int weight;
@@ -58,5 +58,71 @@ int main(){
     // cout<<m1.colour<<endl;
     
     cout<<m1.getweight()<<endl;
-}
+}*/
 
+#include<iostream>
+using namespace std;
+// polymorphism: many forms: 
+// 1.)compile time polymorphism (we can take same name of function if we take different parameters)
+// function overloading:
+/*class addition{
+    public:
+    int add(int a, int b){
+        return a+b;
+    }
+
+    int add(int a,int b,int c){
+        return a+b+c;
+    }
+};
+int main(){
+   addition a1;
+//    a1.add(4,5);
+   cout<<a1.add(4,5)<<endl;
+//    a1.add(2,4,6);
+cout<<a1.add(4,5,7)<<endl;
+}*/
+
+// operator overloading:
+
+/*class B{
+    public:
+    int a;
+    int b;
+    int add(){
+        return a+b;
+    }
+
+    void operator+ (B &obj){
+        int val1=this->a;
+        int val2=obj.a;
+        cout<<val2-val1<<endl;
+
+    }
+};
+int main(){
+   B obj1;
+   B obj2;
+   obj1.a=4;
+   obj1.a=7;
+   obj1+obj2;
+}*/
+
+// run time polymorphism:
+class animal{
+  public:
+  void speak(){
+    cout<<"speaking"<<endl;
+  }
+};
+class dog: public animal{
+ public:
+ void speak(){
+    cout<<"barking"<<endl;
+ }
+};
+
+int main(){
+    dog d1;
+    d1.speak();
+}
